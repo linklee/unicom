@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  skip_before_action :verify_authenticity_token
+
   include ApplicationHelper
 
   def index 
@@ -48,7 +50,8 @@ class ApplicationController < ActionController::Base
 	@user.locality_id = ApplicationHelper.find_location @user.reg_city
 	@user.fact_locality_id = ApplicationHelper.find_location @user.fact_city
 	@user.partner_id = params[:partner_id]
-	@user.save		
+	@user.save	
+	byebug	
 	render 'templates/thanks'
 	ApplicationHelper.create_application @user
   end
