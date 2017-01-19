@@ -50,7 +50,13 @@ module ApplicationHelper
 		url = "https://unicom24.ru/api/partners/requests/v1/locality_search/?term=" + fact_city
 		url = URI.encode url
 		result = HTTParty.get(url, basic_auth: auth)
-		
+		puts " "	
+		puts "<<<<<<<<<<<<<<<<<<<<<<"			
+		puts "<<<<<<<<<<<<<<<<<<<<<<"
+		puts result.parsed_response
+		puts "  "
+		puts "<<<<<<<<<<<<<<<<<<<<<<"
+		puts "<<<<<<<<<<<<<<<<<<<<<<"		
 		if !result.parsed_response.blank?
 			return result.parsed_response[0]['id']
 		end
