@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def self.create_application user
-	auth = { username: Rails.application.secrets[:user], password:  Rails.application.secrets[:pwd]}
+	auth = { username: ENV['user'], password:  ENV['pwd']}
 	body = { 
 		"id": user.id, 
 		"name": user.name,
@@ -46,7 +46,7 @@ module ApplicationHelper
 
 	def self.find_location fact_city
 		byebug
-		auth = { username: Rails.application.secrets[:user], password:  Rails.application.secrets[:pwd]}
+		auth = { username: ENV['user'], password:  ENV['pwd']}
 		url = "https://unicom24.ru/api/partners/requests/v1/locality_search/?term=" + fact_city
 		url = URI.encode url
 		result = HTTParty.get(url, basic_auth: auth)
@@ -58,7 +58,7 @@ module ApplicationHelper
 
 	def self.get_regions
 		url = "https://unicom24.ru/api/partners/requests/v1/region/" 
-		auth = { username: Rails.application.secrets[:user], password:  Rails.application.secrets[:pwd]}
+		auth = { username: ENV['user'], password:  ENV['pwd']}	
 		result = HTTParty.get(url, basic_auth: auth)
 		result.parsed_response
 	end

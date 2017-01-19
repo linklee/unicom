@@ -16,8 +16,7 @@ class UsersController < ApplicationController
     upd_statuses
   end
   def upd_statuses_old
-    auth = { username: Rails.application.secrets[:user], password:  Rails.application.secrets[:pwd]}
-
+    auth = { username: ENV['user'], password:  ENV['pwd']}
     @users.each do |user| 
       url = "https://unicom24.ru/api/partners/requests/v1/"
       result = HTTParty.get(
