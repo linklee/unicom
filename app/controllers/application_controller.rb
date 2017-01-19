@@ -51,7 +51,6 @@ class ApplicationController < ActionController::Base
 	@user.fact_locality_id = ApplicationHelper.find_location @user.fact_city
 	@user.partner_id = params[:partner_id]
 	@user.save	
-	byebug	
 	render 'templates/thanks'
 	ApplicationHelper.create_application @user
   end
