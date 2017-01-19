@@ -1,0 +1,81 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fact_locality_name %><br>
+    <%= f.text_field :fact_locality_name %>
+  </div>
+  <div class="field">
+    <%= f.label :fact_street %><br>
+    <%= f.text_field :fact_street %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_house %><br>
+    <%= f.text_field :reg_house %>
+  </div>
+  <div class="field">
+    <%= f.label :fact_flat %><br>
+    <%= f.text_field :fact_flat %>
+  </div>
+  <div class="field">
+    <%= f.label :same_address %><br>
+    <%= f.check_box :same_address %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_locality_name %><br>
+    <%= f.text_field :reg_locality_name %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_street %><br>
+    <%= f.text_field :reg_street %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_house %><br>
+    <%= f.text_field :reg_house %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_flat %><br>
+    <%= f.text_field :reg_flat %>
+  </div>
+  <div class="field">
+    <%= f.label :surname %><br>
+    <%= f.text_field :surname %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :patronymic %><br>
+    <%= f.text_field :patronymic %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_phone %><br>
+    <%= f.text_field :mobile_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :desired_amount %><br>
+    <%= f.text_field :desired_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :agree_rules %><br>
+    <%= f.check_box :agree_rules %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

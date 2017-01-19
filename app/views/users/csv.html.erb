@@ -1,0 +1,24 @@
+//date offer_id uniq_conversion_id partner_id uniq_click_id number_of_conversions status comment
+<br>
+<% @users.each do |user| %>
+	"<%= user.created_at.strftime('%F')%>"; 
+	<%= user.offer_id ? user.offer_id : 4%>;
+	<%= "unicom_conversion" + user.id.to_s %>;
+	<%= user.partner_id ? user.partner_id : 65 %>;
+	<%= "unicom_click_id" + user.id.to_s %>;
+	<%= 1 %>;
+	<%= case user.status 
+		when "SENT"
+			2
+		when "NEW" 
+			2
+		when nil
+			3
+		else
+			1 
+		end
+	%>;
+	"<%= user.surname %>"
+
+<br>
+<%end%>

@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>App ID</th>
+      <th>status</th>
+      <th>partner_id</th>
+      <!-- <th>Fact locality name</th>
+      <th>Fact street</th>
+      <th>Reg house</th>
+      <th>Fact flat</th>
+      <th>Same address</th>
+      <th>Reg locality name</th>
+      <th>Reg street</th>
+      <th>Reg house</th>
+      <th>Reg flat</th> -->
+      <th>Surname</th>
+      <th>Name</th>
+      <th>Patronymic</th>
+      <th>Mobile phone</th>
+      <th>Email</th>
+      <th>Desired amount</th>
+      <th>Agree rules</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.app_id %></td>
+        <td><%= user.status %></td>
+        <td><%= user.partner_id %></td>
+        <!-- <td><%= user.fact_locality_name %></td>
+        <td><%= user.fact_street %></td>
+        <td><%= user.reg_house %></td>
+        <td><%= user.fact_flat %></td>
+        <td><%= user.same_address %></td>
+        <td><%= user.reg_locality_name %></td>
+        <td><%= user.reg_street %></td>
+        <td><%= user.reg_house %></td>
+        <td><%= user.reg_flat %></td> -->
+        <td><%= user.surname %></td>
+        <td><%= user.name %></td>
+        <td><%= user.patronymic %></td>
+        <td><%= user.mobile_phone %></td>
+        <td><%= user.email %></td>
+        <td><%= user.desired_amount %></td>
+        <td><%= user.agree_rules %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

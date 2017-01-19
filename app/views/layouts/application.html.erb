@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<title>Заявка на кредит</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="Юником24">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://unicom24.ru/static/dist/img/profile/unicom-logo-128x128.png">
+
+<%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

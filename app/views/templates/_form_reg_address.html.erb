@@ -1,0 +1,30 @@
+Адрес регистрации
+<br><br>
+<div class="form_row">
+
+    <label class="w_293 first">
+        <input class="input user_fields surname" type="text" name="reg_city" spellcheck="false" placeholder="Город*"
+        value = <%= params[:reg_city]%>>
+        <span class="error_text"></span>
+    </label>
+    <label class="w_293">
+        <input class="input user_fields name" type="text" name="reg_street" spellcheck="false" placeholder="Улица*"
+        value = <%= params[:reg_street]%>>
+        <span class="error_text"></span>
+    </label>
+    <label class="w_293">
+        <input class="input user_fields patronymic" type="text" name="reg_house" spellcheck="false" placeholder="Номер дома*" 
+        value = <%= params[:reg_house]%>>
+        <span class="error_text"></span>
+    </label>
+
+    <div class="clear"></div>
+</div>
+<div class="form_row">
+    <label class="w_293 first">
+        <input class="input user_fields surname" type="text" name="reg_flat" spellcheck="false" placeholder="Номер квартиры*"
+        value = <%= params[:reg_flat]%>>
+        <span class="error_text"></span>
+    </label>
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,63 @@
+<div class="form_block form_wrapper">
+        <div class="name_lbl">
+            Как <span>Вас</span> зовут
+        </div>
+        <div class="form_row">
+            <label class="w_293 first">
+                <input class="input user_fields surname" type="text" name="surname" spellcheck="false" placeholder="Фамилия*" 
+                value = <%=params[:surname]%>
+                >
+                <span class="error_text"></span>
+            </label>
+            <label class="w_293">
+                <input class="input user_fields name" type="text" name="name" spellcheck="false" placeholder="Имя*"
+                value = <%=params[:name]%>
+                >
+                <span class="error_text"></span>
+            </label>
+            <label class="w_293">
+                <input class="input user_fields patronymic" type="text" name="patronymic" spellcheck="false" placeholder="Отчество*"
+                value = <%=params[:patronymic]%>
+                >
+                <span class="error_text"></span>
+            </label>
+            <div class="clear"></div>
+        </div>
+
+        <div class="form_row">
+            <label class="w_293 first">
+                <input class="input user_fields mobile_phone" type="text" name="mobile_phone" spellcheck="false" placeholder="Мобильный телефон без восьмерки*" minlength="10" maxlength="10"
+                value = <%=params[:mobile_phone]%>
+                >
+                <span class="error_text"></span>
+            </label>
+            <label class="w_293">
+                <input class="input user_fields active email" type="email" name="email" spellcheck="false" placeholder="Введите вашу почту"
+                value = <%=params[:email]%>
+                >
+                <span class="error_text"></span>
+            </label>
+            <label class="w_293">
+                <input class="input user_fields desired_amount" type="number" name="desired_amount" spellcheck="false" placeholder="Желаемая сумма займа*"
+                value = <%=params[:desired_amount]%> 
+                >
+                <span class="error_text"></span>
+            </label>
+            <div class="clear"></div>
+        </div>
+        <div class="checkbox_wrapper">
+            <label class="checkbox">
+                <input class="checkbox-input user_fields agree_rules" type="checkbox" name="agree_rules" data-name="agree_rules" checked="checked"
+                value = <%=params[:agree_rules]%>
+                >
+                <span class="checkbox-label"></span>
+                <div>C условиями <a download="download" href="https://unicom24.ru/media_files/usloviya_peredachi_info/download/">Оферты</a> ознакомился и согласен
+                </div>
+                <span id="check_error" class="error_text"></span>
+            </label>
+        </div>
+        <input class="hidden" name="partner_id" value=<%=params[:partner_id]%>>
+        <div class="clear"></div>
+
+        <button class="to_additional_info btn submit_btn b_next">Далее<i class="i-arrow"></i></button>
+</div>

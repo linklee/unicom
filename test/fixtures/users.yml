@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fact_locality_name: MyString
+  fact_street: MyString
+  reg_house: MyString
+  fact_flat: MyString
+  same_address: false
+  reg_locality_name: MyString
+  reg_street: MyString
+  reg_house: MyString
+  reg_flat: MyString
+  surname: MyString
+  name: MyString
+  patronymic: MyString
+  mobile_phone: MyString
+  email: MyString
+  desired_amount: MyString
+  agree_rules: false
+
+two:
+  fact_locality_name: MyString
+  fact_street: MyString
+  reg_house: MyString
+  fact_flat: MyString
+  same_address: false
+  reg_locality_name: MyString
+  reg_street: MyString
+  reg_house: MyString
+  reg_flat: MyString
+  surname: MyString
+  name: MyString
+  patronymic: MyString
+  mobile_phone: MyString
+  email: MyString
+  desired_amount: MyString
+  agree_rules: false

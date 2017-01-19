@@ -1,0 +1,73 @@
+<div id="bg_top"></div>
+<div id="content">
+    <input type="hidden" name="csrfmiddlewaretoken" value="lyOzep9Hxqz2OfOEkkZEzJyJ6N1GPkOG">
+    <div class="loader_wrapper">
+        <div class="bg"></div>
+        <div class="img_load"></div>
+    </div>
+    <div id="qiwi_wrapper">
+        <div id="pages_wrapper"><div class="page_container"><div class="steps"><div id="head">
+    <div id="header_caption">
+        Узнайте вероятность одобрения по кредиту,<br>заполнив заявку за одну минуту
+    </div>
+    
+    <div class="clear"></div>
+    <div id="list">
+        <ul>
+            <li>
+                <i class="checkbox"></i><strong>БЫСТРО.</strong> Мы определяем ваш кредитный рейтинг по паспортным данным за 10 секунд и показываем предварительные решения по банковским предложениям online! У банков этот процесс занимает более 3 дней.
+            </li>
+            <li>
+                <i class="checkbox"></i><strong>ВЫСОКАЯ ВЕРОЯТНОСТЬ ОДОБРЕНИЯ.</strong> С нами работает более 100 банков и мфо. На основе вашего кредитного рейтинга подбираются только те предложения, вероятность одобрения у которых больше 90%.
+            </li>
+            <li>
+                <i class="checkbox"></i><strong>УДОБНО.</strong> Вы заполняете одну короткую заявку, которую можете отправить сразу в несколько предложений, которые мы для вас поберем. Больше не надо рассылать десятки заявок и ждать решения по каждой.
+            </li>
+            <li>
+                <i class="checkbox"></i><strong>БЕСПЛАТНО.</strong> Мы не брокер. Мы зарабатываем на банках-партнерах, поэтому не берем денег с клиентов.
+            </li>
+            <li>
+                <i class="checkbox"></i><strong>БЕЗОПАСНО.</strong> Мы не передаем ваши персональные данные сторонним организациям. Вы сами выбираете, в какие предложения отправить заявку.
+            </li>
+        </ul>
+    </div>
+    <%= render "templates/right_form" %>
+    
+    <div class="clear"></div>
+
+    <div class="step_service">
+        <div class="cols">
+            <span>1 шаг</span>
+            <div class="pic"></div>
+            <div class="clear"></div>
+        </div>
+        <div class="cols">
+            <span>2 шаг</span>
+            <div class="pic"></div>
+            <div class="clear"></div>
+        </div>
+        <div class="cols">
+            <span>3 шаг</span>
+            <div class="pic"></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="text_line">
+        <div class="cols_text">Вы оставляете свои данные, и мы подбираем вам индивидуальные предложения на основе вашего кредитного рейтинга.</div>
+        <div class="cols_text">Мы показываем кредитные предложения с высокой вероятностью одобрения. Вы сами выбираете куда отправить заявку.</div>
+        <div class="cols_text">Через 5-6 минут с вами свяжется сотрудник организации, которую вы выбрали, и скажет вам решение по кредиту.</div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="steps-container">
+    <div id="user_block">
+        <span id="text_c">Ваши данные</span>
+    </div>
+    <form action="step2">
+        <%= render "templates/form_part1"%>
+    </form>
+</div>
+</div></div>
+</div>
+</div>
+</div>
