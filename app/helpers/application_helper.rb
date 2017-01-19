@@ -45,7 +45,7 @@ module ApplicationHelper
 	end
 
 	def self.find_location fact_city
-		byebug
+		
 		auth = { username: ENV['user'], password:  ENV['pwd']}
 		url = "https://unicom24.ru/api/partners/requests/v1/locality_search/?term=" + fact_city
 		url = URI.encode url
