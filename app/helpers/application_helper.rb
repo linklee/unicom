@@ -51,7 +51,7 @@ module ApplicationHelper
 		url = URI.encode url
 		result = HTTParty.get(url, basic_auth: auth)
 		
-		if result.parsed_response.first 
+		if !result.parsed_response.blank?
 			return result.parsed_response[0]['id']
 		end
 	end
