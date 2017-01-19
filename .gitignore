@@ -60,3 +60,8 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore application configuration
+/config/application.yml
+
+/config/initializers/app_env_vars.rb
