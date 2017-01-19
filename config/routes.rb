@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'send_app' => 'application#send_app'
   get 'thnx' => 'application#thnx'
   get 'csv' => 'users#csv'
+  get 'frame' => 'application#frame'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

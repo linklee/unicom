@@ -9,7 +9,9 @@ class ApplicationController < ActionController::Base
   def index 
 	render 'templates/index'
   end
-
+  def frame 
+	render 'templates/frame'
+  end
   def step2 
 	render 'templates/step2'
   end
