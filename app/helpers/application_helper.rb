@@ -52,7 +52,7 @@ module ApplicationHelper
 		result = HTTParty.get(url, basic_auth: auth)
 		
 		if result.parsed_response.first 
-			return result.parsed_response.first['id']
+			return result.parsed_response.first['id'].to_s
 		end
 	end
 
