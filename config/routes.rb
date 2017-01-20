@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'application#index'
+  root 'application#frame'
   get 'step2' => 'application#step2'
   get 'send_app' => 'application#send_app'
   get 'thnx' => 'application#thnx'
