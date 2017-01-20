@@ -10,12 +10,14 @@ class ApplicationController < ActionController::Base
 	render 'templates/index'
   end
   def frame 
+  	@click_id = params['click_id']
+  	@sub_id = params['sub_id']
+
 	render 'templates/frame'
   end
   def step2 
 	render 'templates/step2'
   end
-  
   def thnx 
 	render 'templates/thanks'
   end
