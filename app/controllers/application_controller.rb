@@ -78,7 +78,7 @@ class ApplicationController < ActionController::Base
 		    status = 0
 	  end
 	  test_url = "http://xxx.requestcatcher.com/?clickid=#{click_id}&goal=1&status=#{status}"
-	  ok_test_url = URI.parse(URI.encode(url))
+	  ok_test_url = URI.parse(URI.encode(test_url))
 
 	  url = "http://offers.atgmedia.affise.com/postback??clickid=#{click_id}&goal=1&status=#{status}" 
 	  encoded_url = URI.encode(url)
