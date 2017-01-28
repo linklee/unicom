@@ -65,9 +65,9 @@ class ApplicationController < ActionController::Base
 	  old_status = status
 	  case status
 		  when 'spam' 
-		    status = 0
+		    status = 3
 		  when 'canceled'
-		    status = 0
+		    status = 3
 		  when 'processing'
 		    status = 2 
 		  when 'accepted'
@@ -75,7 +75,7 @@ class ApplicationController < ActionController::Base
 		  when 'paid'
 		    status = 1
 		  else
-		    status = 0
+		    status = 2
 	  end
 	  test_url = "http://xxx.requestcatcher.com/?clickid=#{click_id}&goal=1&status=#{status}"
 	  ok_test_url = URI.parse(URI.encode(test_url))
