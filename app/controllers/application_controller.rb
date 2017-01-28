@@ -80,7 +80,7 @@ class ApplicationController < ActionController::Base
 	  encoded_url = URI.encode(url)
 	  ok_url = URI.parse(encoded_url)
 	  HTTParty.get ok_url
-	  return "Ok"
+	  render html: "ok"
   end
 
 end
