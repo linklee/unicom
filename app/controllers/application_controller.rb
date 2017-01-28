@@ -62,6 +62,7 @@ class ApplicationController < ActionController::Base
   def offer
 	  click_id = params[:click_id]
 	  status = params[:status]
+	  old_status = status
 	  case status
 		  when 'spam' 
 		    status = 0
@@ -80,7 +81,7 @@ class ApplicationController < ActionController::Base
 	  encoded_url = URI.encode(url)
 	  ok_url = URI.parse(encoded_url)
 	  HTTParty.get ok_url
-	  render html: "ok #{status}"
+	  render html: "ok #{status} old status: #{old_status} click_id: #{click_id}"
   end
 
 end
