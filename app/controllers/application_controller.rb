@@ -59,6 +59,25 @@ class ApplicationController < ActionController::Base
 	ApplicationHelper.create_application @user
   end
 
-  
+  def offer
+	  click_id = params[:click_id]
+	  status = params[:status]
+	  case status
+		  when 'spam' 
+		    status = 0
+		  when 'canceled'
+		    status = 0
+		  when 'processing'
+		    status = 2 
+		  when 'accepted'
+		    status = 1
+		  when 'paid'
+		    status = 1
+		  else
+		    status = 0
+	  end
+	  HTTParty.get('http://xxx.requestcatcher.com/?clickid=#{click_id}&goal=1&status=#{status}')
+	  return "Ok"
+  end
 
 end
