@@ -76,7 +76,10 @@ class ApplicationController < ActionController::Base
 		  else
 		    status = 0
 	  end
-	  HTTParty.get('http://xxx.requestcatcher.com/?clickid=#{click_id}&goal=1&status=#{status}')
+	  url = 'http://xxx.requestcatcher.com/?clickid= #{click_id} &goal=1 & status= #{status} '
+	  encoded_url = URI.encode(url)
+	  ok_url = URI.parse(encoded_url)
+	  HTTParty.get ok_url
 	  return "Ok"
   end
 
