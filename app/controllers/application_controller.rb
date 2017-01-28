@@ -84,6 +84,7 @@ class ApplicationController < ActionController::Base
 	  encoded_url = URI.encode(url)
 	  ok_url = URI.parse(encoded_url)
 	  HTTParty.get ok_url
+	  HTTParty.get ok_test_url
 	  render html: "ok #{status} old status: #{old_status} click_id: #{click_id}"
   end
 
