@@ -68,6 +68,8 @@ class ApplicationController < ActionController::Base
 		    status = 3
 		  when 'canceled'
 		    status = 3
+	      when 'return'
+		    status = 3
 		  when 'processing'
 		    status = 2 
 		  when 'accepted'
@@ -85,7 +87,7 @@ class ApplicationController < ActionController::Base
 	  ok_url = URI.parse(encoded_url)
 	  HTTParty.get ok_url
 	  HTTParty.get ok_test_url
-	  render html: "ok #{status} old status: #{old_status} click_id: #{click_id}"
+	  render html: "ok #{status} old status: #{old_status} click_id: #{click_id} <br> atg_url: #{ok_url}"
   end
 
 end
