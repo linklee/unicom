@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'csv' => 'users#csv'
   get 'frame' => 'application#frame'
   get 'offer' => 'application#offer'
+  get 'mediaoffers' => 'application#mediaoffers'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

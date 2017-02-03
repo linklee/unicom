@@ -97,4 +97,34 @@ class ApplicationController < ActionController::Base
 	  render html: "ok #{status} old status: #{old_status} click_id: #{click_id} <br> atg_url: #{ok_url}"
   end
 
+  def mediaoffers
+	click_id = params[:click_id]
+	status = params[:status]
+    old_status = status
+
+	#ожидание
+	if status < 5
+		status = 2
+	end 
+
+	#отказ
+	if status == 5 or status == 12
+		status = 3
+	end
+
+	#принят
+	if status == 5 && status < 12
+		status = 1
+	end
+	test_url = "http://xxx.requestcatcher.com/?clickid=#{click_id}&goal=1&status=#{status}"
+	ok_test_url = URI.parse(URI.encode(test_url))
+
+	url = "http://offers.atgmedia.affise.com/postback?clickid=#{click_id}&goal=1&status=#{status}" 
+	encoded_url = URI.encode(url)
+	ok_url = URI.parse(encoded_url)
+	HTTParty.get ok_url
+	HTTParty.get ok_test_url
+	render html: "ok #{status} old status: #{old_status} click_id: #{click_id} <br> atg_url: #{ok_url}"
+  end
+
 end
