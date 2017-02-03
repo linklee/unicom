@@ -63,6 +63,13 @@ class ApplicationController < ActionController::Base
 	  click_id = params[:click_id]
 	  status = params[:status]
 	  old_status = status
+	  # spam - Ошибка/Спам/Дубль
+	  # return - Возврат
+	  # canceled - Отменен
+	  # processing - Обработка
+	  # accepted - Принят
+	  # paid - Оплачен
+
 	  case status
 		  when 'spam' 
 		    status = 3
