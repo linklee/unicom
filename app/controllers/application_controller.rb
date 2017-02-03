@@ -99,7 +99,7 @@ class ApplicationController < ActionController::Base
 
   def mediaoffers
 	click_id = params[:click_id]
-	status = params[:status]
+	status = Integer params[:status]
     old_status = status
 
 	#ожидание
