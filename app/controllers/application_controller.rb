@@ -83,6 +83,13 @@ class ApplicationController < ActionController::Base
 		    status = 1
 		  when 'paid'
 		    status = 1
+		  #funcpa Статус заявки (waiting - создана, approved - подтверждена, decline - отменена)
+		  when 'approved'
+		    status = 1
+		  when 'waiting'
+		    status = 2
+		  when 'decline'
+		    status = 3
 		  else
 		    status = 2
 	  end
