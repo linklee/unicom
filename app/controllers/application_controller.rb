@@ -89,8 +89,7 @@ class ApplicationController < ActionController::Base
 		  when 'waiting'
 		    status = 2
 		  when 'decline'
-		    #status = 3
-		    status = 2
+		    status = 3
 		  else
 		    status = 2
 	  end
