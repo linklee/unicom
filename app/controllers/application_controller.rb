@@ -90,6 +90,7 @@ class ApplicationController < ActionController::Base
 		    status = 2
 		  when 'decline'
 		    #status = 3
+		    status = 2
 		  else
 		    status = 2
 	  end
