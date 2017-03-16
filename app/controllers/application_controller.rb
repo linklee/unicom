@@ -93,7 +93,7 @@ class ApplicationController < ActionController::Base
 		  else
 		    status = 2
 	  end
-	  test_url = "http://xxx.requestcatcher.com/?clickid=#{click_id}&goal=1&status=#{status}"
+	  test_url = "http://xxx.requestcatcher.com/?clickid=#{click_id}&goal=1&status=#{status}&old_status=#{old_status}"
 	  ok_test_url = URI.parse(URI.encode(test_url))
 	  puts "хуйпизда"
 	  url = "http://offers.atgmedia.affise.com/postback?clickid=#{click_id}&goal=1&status=#{status}" 
